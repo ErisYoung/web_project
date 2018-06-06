@@ -9,4 +9,10 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
+app.get('/users/:name',function (req,res) {
+    res.render('login',{
+        name:req.params.name,
+    });
+});
+
 app.listen(3000);
