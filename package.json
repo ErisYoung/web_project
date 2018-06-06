@@ -1,0 +1,23 @@
+{
+  "name": "web_project",
+  "version": "1.0.0",
+  "description": "* 杨德杰 2016210405060 组长\r * 干臻原 2016210405067 \r * 李伊宁 201621040506",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErisYoung/web_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErisYoung/web_project/issues"
+  },
+  "homepage": "https://github.com/ErisYoung/web_project#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.14.0"
+  }
+}
