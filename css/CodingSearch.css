@@ -12,15 +12,15 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #A3D0C3;
+    /*background: #A3D0C3;*/
 }
 
 .search {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 38.2%;
-    background: #A3D0C3;
+    top: 33.2%;
+    /*background: #A3D0C3;*/
 }
 
 input, button {
@@ -44,8 +44,9 @@ button {
     border: 2px solid #7BA7AB;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background: #F9F0DA;
+    /*background: #F9F0DA;*/
     color: black;
+    font-size: 16px;
 }
 
 .search button {
@@ -62,23 +63,30 @@ button {
 .head {
     width: 100%;
     height: 45px;
-    background: #F9F0DA;
+    background: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .login {
     width: 78px;
-    height: 45px;
+    height: 35px;
     margin-right: 5px;
-    background: white;    
-    float: right;
+    background: #27AE60;    
     font-size: 16px;
+    padding: 0;
+    border-radius: 5px;
+    color: #dddddd;
 }
+/*.login:hover{
+    background: #00893C;
+}*/
 .nav {
-    width: 78px;
-    height: 45px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    background: white;
-    margin-left: 10px;
-    font-size: 20px;
+    height: 35px;
+    margin-left: 20px;
+    padding:4px 10px 4px 10px;
+    line-height: 24px;
+    font-size: 18px;
     text-decoration: none;
+    color:#dddddd;
 }
