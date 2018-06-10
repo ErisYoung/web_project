@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-06-08 08:20:37
+ * @version $Id$
+ */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #A3D0C3;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 38.2%;
+    background: #A3D0C3;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+input {
+    width: 51.8%;
+    height: 42px;
+    padding-left: 13px;
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.search input {
+    border: 2px solid #7BA7AB;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #F9F0DA;
+    color: black;
+}
+
+.search button {
+    top: 0;
+    right: 0;
+    background: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+}
+
+.search button:before {
+    font-size: 16px;
+    color: #F9F0DA;
+}
+.head {
+    width: 100%;
+    height: 45px;
+    background: #F9F0DA;
+}
+.login {
+    width: 78px;
+    height: 45px;
+    margin-right: 5px;
+    background: white;    
+    float: right;
+    font-size: 16px;
+}
+.nav {
+    width: 78px;
+    height: 45px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background: white;
+    margin-left: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
