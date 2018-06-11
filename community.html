@@ -13,17 +13,55 @@
         <script src="js/CodingSearch.js"></script>
     </head>
     <body>
-        <div class="head">
+        <div class="head" id="community-head">
             <div>
                 <a href="" class="nav">主页</a>
                 <a href="" class="nav">社区</a>
                 <a href="" class="nav">个人</a>
+                <div class="head-search" style="height: 30px;display: inline-block; font-size: 0">
+                    <input type="text" name="search-context" class="head-searchinput" placeholder="search for question"></input>
+                    <button type="button" class="head-searchbtn"><i class="iconfont icon-xiazai5"></i></button>
+                </div>
             </div>
             <div></div>
             <div>
-            <button type="button" class="login">登录</button>
-            <button type="button" class="sign">注册</button>
+                <button type="button" class="login">登录</button>
+                <button type="button" class="sign">注册</button>
+            </div>
         </div>
+        <h1>问题</h1>
+        <div class="question"></div>
+        <div class="question"></div>
+        <div class="question"></div>
+        <div class="question"></div>
+        <div class="question"></div>
+        <div class="question"></div>
+        <div>
+            <div class="login-form">
+                <div class="login-header">
+                    <span>用户登录</span>
+                    <button type="button" class="login-close">x</button>
+                </div>
+                <div class="login-cnt">
+                    <form action="" method="get">
+                        <div class="login-input">
+                            <span>用户名</span>
+                            <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
+                        </div>
+                        <div class="login-input">
+                            <span>密码</span>
+                            <input type="password" class="upwd" id="upwd" name="upwd" autocomplete="off" spellcheck="false" placeholder="">
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
+                            <div>
+                                <a href="" class="" role="button">注册</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="login-form-mask"></div>
         </div>
     </body>
 </html>
