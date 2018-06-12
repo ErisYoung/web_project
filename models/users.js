@@ -12,5 +12,8 @@ module.exports = {
       .findOne({ name: name })
       .addCreatedAt()
       .exec();
-  }
+  },
+  updataUserById:function updataUserById(id,data) {
+    return User.update({_id:id},{$set:data}).exec();
+  },
 };
