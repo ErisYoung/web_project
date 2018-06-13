@@ -185,7 +185,7 @@ html, body {
     margin-left: 20px;
     box-sizing: border-box;
     background: #555555;
-
+    transition: all 0.5s ease;
 }
 .head-searchbtn {
     position: relative;
@@ -194,5 +194,5 @@ html, body {
     cursor: pointer;
     border-radius: 0 3px 3px 0;
     background: #555555;
-
+    transition:all 0.5s ease;
 }
