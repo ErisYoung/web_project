@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+</head>
+
+<body>
+
+    <%- include('components/nav-setting') %>
+        <%- include('header') %>
+
+            <div class="ui grid">
+                <div class="four wide column"></div>
+                <div class="eight wide column">
+                    <div class="ui form segment">
+                        <div class="field required">
+                            <label>头像</label>
+                            <img class="avatar" src="/img/<%= user.avatar %>">
+                        </div>
+                        <div class="field required">
+                            <label>用户名</label>
+                            <%= user.name %>
+                        </div>
+                        <div class="field required">
+                            <label>性别</label>
+                            <% if(user.gender=='m') {%>
+                                <%= '程序猿' %>
+                                    <% } else if(user.gender=='f') {%>
+                                        <%= '程序媛'%>
+                                            <% } else { %>
+                                                <%= '程序⚪'%>
+                                                    <% } %>
+                        </div>
+                        <div class="field required">
+                            <label>个人简介</label>
+                            <div> <%= user.bio  %></div>
+                        </div>
+                        <a href="/setting/edit">编辑</a>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('footer') %>

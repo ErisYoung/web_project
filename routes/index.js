@@ -11,9 +11,13 @@ module.exports = function (app) {
   // 个人主页
   app.use('/posts', require('./posts'));
   // 404 page
+  app.get('/404',function(req,res){
+    res.render('404');
+  });
   app.use(function (req, res) {
     if (!res.headersSent) {
-      res.render('404');
+      res.redirect('/404');
     }
   });
+  
 };
