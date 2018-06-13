@@ -17,6 +17,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
 
   UserModel.getUserByName(name)
     .then(function (user) {
+      console.log( JSON.stringify(user)+'----------------user');
       if (!user) {
         req.flash('error', '用户不存在');
         return res.redirect('back');

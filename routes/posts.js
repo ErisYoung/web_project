@@ -19,6 +19,19 @@ router.get('/', function(req, res, next) {
     })
     .catch(next);
 });
+
+router.post('/search',function (req,res,next) {
+  var searchword=req.fields.searchword;
+  console.log(searchword+'           searchword');
+  PostModel.getSearchPosts(searchword)
+  .then(function(posts){
+    console.log( JSON.stringify(posts[0])+'          avator');
+    res.render('posts',{
+      posts:posts
+    });
+  }).catch(next);
+});
+
 // GET /posts/create 发表文章页
 router.get('/create', checkLogin, function(req, res, next) {
   res.render('create');
@@ -77,6 +90,7 @@ router.get('/:postId', function(req, res, next) {
     var comments = result[1];
     if (!post) {
       throw new Error('该文章不存在');
+      // res.redirect('/404');
     }
 
     res.render('post', {

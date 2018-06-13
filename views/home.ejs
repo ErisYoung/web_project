@@ -13,16 +13,53 @@
 </head>
 
 <body>
-    <%- include('components/notification') %>
+        <!-- <form  method="post" action="/home">
+            <div >
+              <input type="text" name="title">
+            </div>
+            <input type="submit"  value="发布" id="test">
+        </form> -->
+    <!-- <form class="ui form segment" method="post" enctype="multipart/form-data">
+        <div class="field required">
+                <input type="text" name="search" >
+          
         </div>
-        </div>
-        <a href="/">主页</a>
-        <a href="/posts">社区</a>
-        <% if (user) {%>
+        <input type="submit" class="ui button fluid" value="注册">
+      </div>
+    </form> -->
+   
 
-            <a href="/signout"></a>
-            <% } else { %>
-                <a href="/signin">登录</a>
-                <a href="/signup">注册</a>
-                <% } %>
-                    <h1>hello</h1>
+
+        <%- include('components/notification') %>
+            <a href="/">主页</a>
+            <a href="/posts">社区</a>
+            <% if (user) {%>
+
+                <a href="/signout">登出</a>
+                <% } else { %>
+                    <a href="/signin">登录</a>
+                    <a href="/signup">注册</a>
+                    <% } %>
+                        <h1>hello</h1>
+    
+    
+    <!-- <script>
+    $(function(){
+        $("#test").click(function(){
+            $.ajax({
+                type:'post',
+                url:'/home',
+                contentType:"application /json",
+                data:{val1:'1',val2:'2'},
+                dataType:'json',
+                success: function (data) {//ajax请求成功后触发的方法
+                alert('请求成功');
+                },
+                error: function (msg) {//ajax请求失败后触发的方法
+                alert('error');//弹出错误信息
+                }
+            })
+        });
+    });
+    </script>                   -->
+</body>

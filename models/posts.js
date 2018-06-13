@@ -65,12 +65,26 @@ module.exports = {
     return Post
       // 返回所有文章或者未author的所有文章
       .find(query)
+      // 即在author这个键填上，与其_id 相同_id 值的user表的一条字段  ->"author":{"_id":"5b210489d605b93afc220419","name":"test2", ...******
       .populate({ path: 'author', model: 'User' })
       .sort({ _id: -1 })
       .addCreatedAt()
       .addCommentsCount()
       .contentToHtml()
       .exec();
+  },
+  // 根据关键字，获取所有标题有关键字的文章页
+  getSearchPosts:function getSearchPosts(searchword) {
+    return Post
+    // 或者写为  title:{$regex:searchword,$options:"$i"}
+    .find({title:eval('/'+searchword+'/i')  })
+    .populate({ path: 'author', model: 'User' })
+    // 浏览量降序，   更改为点赞量
+    .sort({ pv:-1})
+    .addCreatedAt()
+    .addCommentsCount()
+    .contentToHtml()
+    .exec();
   },
 
   // 通过文章 id 给 pv 加 1
