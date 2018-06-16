@@ -1,42 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<%- include('header') %>
     <a href="/">
       主页</a>
     <a href="/posts">社区</a>
     
-    <form action="/posts/search" method="POST">
-      <input type="text" name="searchword" placeholder="Search">
+    <!-- <form action="/posts/search" method="POST"> -->
+      <input type="text" name="searchword" placeholder="Search" id="searchword">
       <input type="submit" value="搜索" id="submit">
-    </form>
+    <!-- </form> -->
 
     <h1>Com</h1>
     <br>
     <br>
     <br>
-    <%- include('header') %>
     
-      <% posts.forEach(function (post) { %>
+
+    <div id="posts">
+        <% console.log(user.id) %>
+ <% posts.forEach(function (post) { %>
         <!-- 传入post变量 -->
         <%- include('components/post-content', { post: post }) %>
           <% }) %>
+    </div>
     
-          <script src="../public/javascripts/jquery.js"></script>
-          <script type="text/javascript">
-              // 点击按钮弹出下拉框
-              $('.ui.dropdown').dropdown();
-              // 鼠标悬浮在头像上，弹出气泡提示框
-              $('.post-content .avatar').popup({
-                inline: true,
-                position: 'bottom right',
-                lastResort: 'bottom right',
-              });
-            </script>
-            </body> 
-          </html>
+    <div id="show"></div>
+          <script src="javascripts/ejs.min.js"></script>
+          <script src="javascripts/search.js"></script>
+<script type="text/javascript">
+  // 点击按钮弹出下拉框
+  $('.ui.dropdown').dropdown();
+  // 鼠标悬浮在头像上，弹出气泡提示框
+  $('.post-content .avatar').popup({
+    inline: true,
+    position: 'bottom right',
+    lastResort: 'bottom right',
+  });
+</script>
+</body>
+</html>

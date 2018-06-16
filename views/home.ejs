@@ -8,7 +8,7 @@
     </title>
     <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascripts/jquery.js"></script>
     <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
 </head>
 
@@ -42,13 +42,19 @@
                 <a href="/signup">注册</a>
                 <% } %>
                     <h1>hello</h1>
-                    <script charset="UTF-8" type="text/javascript" src="javascripts/ejs.min.js"></script>
-                    <script charset="UTF-8" type="text/template" id="show">
-                        <% if(data){ %> 
-                            <h1><%= data[0].hha %></h1> 
-                            <% } %>
+                    <div id="show">
+
+                    </div>
+                    <script charset="UTF-8" type="text/template" id="newshow">
+                            <% if(data) { %>
+                                <% data.forEach(function(dat){  %>
+                                    <h1><%= dat.hha %></h1>
+                                    <% console.log(dat.hha+'-------------------') %>
+                                    <% }) %>
+                                    <% } %> 
                     </script>
                     
+                    <script charset="UTF-8" type="text/javascript" src="javascripts/ejs.min.js"></script>
 
                     <script src="javascripts/home.js">
                         

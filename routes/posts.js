@@ -22,13 +22,20 @@ router.get('/', function(req, res, next) {
 
 router.post('/search',function (req,res,next) {
   var searchword=req.fields.searchword;
-  console.log(searchword+'           searchword');
+  // console.log(searchword+'           searchword');
   PostModel.getSearchPosts(searchword)
   .then(function(posts){
-    console.log( JSON.stringify(posts[0])+'          avator');
-    res.render('posts',{
-      posts:posts
-    });
+    // console.log( JSON.stringify(posts)+'          avator');
+    posts.user=req.session.user;
+    var user=req.session.user;
+    // console.log( JSON.stringify(posts)+'          seconde');
+    console.log(JSON.stringify(posts)+"---");
+    // res.render('posts',{
+    //   posts:posts
+    // });
+
+    //返回数据，为回调函数中  data里面有 posts和user
+    res.send({posts:posts,user:user});
   }).catch(next);
 });
 

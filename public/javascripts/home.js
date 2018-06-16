@@ -17,6 +17,7 @@ $(function () {
                 // });
                 // $('#show').html(x);
                 bindHTML(data);
+                
                 // alert('success');
             }
         });
@@ -25,9 +26,10 @@ $(function () {
 });
 
 function bindHTML(data) {
-    var str = $('#show').html();
-   
-    var result = ejs.render(str, {
+    var str =  $('#newshow').text();
+    var st=  " <% if(data) { %>"+
+        "<% data.forEach(function(dat){  %><h1><%= dat.hha %></h1><% console.log(dat.hha+'-------------------') %><% }) %><% } %> "
+    var result = ejs.render(st, {
         data: data
     });
     console.log(result);
