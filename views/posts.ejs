@@ -15,7 +15,6 @@
     
 
     <div id="posts">
-        <% console.log(user.id) %>
  <% posts.forEach(function (post) { %>
         <!-- 传入post变量 -->
         <%- include('components/post-content', { post: post }) %>
@@ -23,8 +22,8 @@
     </div>
     
     <div id="show"></div>
-          <script src="javascripts/ejs.min.js"></script>
-          <script src="javascripts/search.js"></script>
+<script src="javascripts/ejs.min.js"></script>
+<script src="javascripts/search.js"></script>
 <script type="text/javascript">
   // 点击按钮弹出下拉框
   $('.ui.dropdown').dropdown();
