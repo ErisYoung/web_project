@@ -5,21 +5,28 @@ var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
 // var config = require('config-lite');
 var config = require('config-lite')('config');
-var routes = require('./routes');
 var pkg = require('./package');
+var formidable=require('express-formidable');
+var bodyParser = require('body-parser');
 
 // var winston = require('winston');
 // var expressWinston = require('express-winston');
 
 var app = express();
 
+
+var routes = require('./routes/index');
+
+
 // 设置模板目录
 app.set('views', path.join(__dirname, 'views'));
 // 设置模板引擎为 ejs
 app.set('view engine', 'ejs');
 
+
 // 设置静态文件目录
 app.use(express.static(path.join(__dirname, 'public')));
+
 // session 中间件
 app.use(session({
   name: config.session.key,// 设置 cookie 中保存 session id 的字段名称
@@ -35,7 +42,7 @@ app.use(session({
 app.use(flash());
 
 // 处理表单及文件上传的中间件
-app.use(require('express-formidable')({
+app.use(formidable({
   uploadDir: path.join(__dirname, 'public/img'),// 上传文件目录
   keepExtensions: true// 保留后缀
 }));
@@ -54,32 +61,10 @@ app.locals.blog = {
     // console.log('index.js:'+res.locals.error);
     next();
   });
-// 正常请求的日志
-// app.use(expressWinston.logger({
-//   transports: [
-//     new (winston.transports.Console)({
-//       json: true,
-//       colorize: true
-//     }),
-//     new winston.transports.File({
-//       filename: 'logs/success.log'
-//     })
-//   ]
-// }));
+
 // 路由
 routes(app);
-// 错误请求的日志
-// app.use(expressWinston.errorLogger({
-//   transports: [
-//     new winston.transports.Console({
-//       json: true,
-//       colorize: true
-//     }),
-//     new winston.transports.File({
-//       filename: 'logs/error.log'
-//     })
-//   ]
-// }));
+
 
 // error page
 app.use(function (err, req, res, next) {

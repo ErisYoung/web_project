@@ -1,3 +1,17 @@
+<%- include('components/notification') %>
+    <a href="/">主页</a>
+    <a href="/posts">社区</a>
+    <% if (user) {%>
+
+        <a href="/signout">登出</a>
+        <% } else { %>
+            <a href="/signin">登录</a>
+            <a href="/signup">注册</a>
+            <% } %>
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>

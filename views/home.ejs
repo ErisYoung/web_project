@@ -3,26 +3,102 @@
 
 <head>
     <meta charset="utf-8">
-    <title>
-        <%= blog.title %>
-    </title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/CodingSearch.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="javascripts/CodingSearch.js"></script>
+    <script src="javascripts/home.js"></script>
+    <link rel="stylesheet" href="css/searchContent.css">
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script> -->
 </head>
 
 <body>
-    <%- include('components/notification') %>
+    <div class="head">
+        <div>
+            <a href="/" class="nav">主页</a>
+            <a href="/posts" class="nav">社区</a>
+            <!-- <a href="usr.html" class="nav">个人</a> -->
         </div>
-        </div>
-        <a href="/">主页</a>
-        <a href="/posts">社区</a>
+        <div></div>
         <% if (user) {%>
-
-            <a href="/signout"></a>
+            <a href="/signout">登出</a>
             <% } else { %>
-                <a href="/signin">登录</a>
-                <a href="/signup">注册</a>
+                <div>
+                    <button type="button" class="login">登录</button>
+                    <a href="/signup">
+                        <button type="button" class="sign">注册</button>
+                    </a>
+                </div>
+
                 <% } %>
-                    <h1>hello</h1>
+    </div>
+    <%- include('components/notification') %>
+        <div class="search">
+            <input type="text" placeholder="Input your question" id="searchbar">
+            <button type="button" class="" id="search-button">
+                <i class="iconfont icon-xiazai5"></i>
+            </button>
+            <div class="content" id="content">
+                
+
+                
+            </div>
+            
+        </div>
+        <div class="login-form">
+            <div class="login-header">
+                <span>用户登录</span>
+                <button type="button" class="login-close">x</button>
+            </div>
+            <div class="login-cnt">
+                <form action="/signin" method="post">
+                    <div class="login-input">
+                        <span>用户名</span>
+                        <input type="text" class="uname" id="name" name="name" autocomplete="off" spellcheck="false" placeholder="">
+                    </div>
+                    <div class="login-input">
+                        <span>密码</span>
+                        <input type="password" class="upwd" id="password" name="password" autocomplete="off" spellcheck="false" placeholder="">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
+                        <div>
+                            <a href="" class="" role="button">注册</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script charset="UTF-8" type="text/javascript" src="javascripts/ejs.min.js"></script>
+        <!-- <script src="javascripts/home.js"> -->
+        </script>
+</body>
+
+</html>
+<!-- <form  method="post" action="/home">
+            <div >
+              <input type="text" name="title">
+            </div>
+            <input type="submit"  value="发布" id="test">
+        </form> -->
+
+
+<!-- <div id="myDiv">
+            <h2>通过 AJAX 改变文本</h2>
+        </div>
+        <button id="testAjax" type="submit">Ajax改变内容</button> -->
+
+<!-- <h1>data</h1> -->
+
+
+<!-- <div id="show">
+
+                </div> -->

@@ -19,6 +19,7 @@
               <span>留言(<%= post.commentsCount %>)</span>
   
               <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
+            
                 <div class="ui inline dropdown">
                   <div class="text"></div>
                   <i class="dropdown icon"></i>

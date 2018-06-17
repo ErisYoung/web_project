@@ -17,6 +17,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
 
   UserModel.getUserByName(name)
     .then(function (user) {
+      console.log( JSON.stringify(user)+'----------------user');
       if (!user) {
         req.flash('error', '用户不存在');
         return res.redirect('back');
@@ -31,7 +32,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
       delete user.password;
       req.session.user = user;
       // 跳转到主页
-      res.redirect('/posts');
+      res.redirect('back');
     })
     .catch(next);
 });

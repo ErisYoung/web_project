@@ -19,6 +19,26 @@ router.get('/', function(req, res, next) {
     })
     .catch(next);
 });
+
+router.post('/search',function (req,res,next) {
+  var searchword=req.fields.searchword;
+  // console.log(searchword+'           searchword');
+  PostModel.getSearchPosts(searchword)
+  .then(function(posts){
+    // console.log( JSON.stringify(posts)+'          avator');
+    posts.user=req.session.user;
+    var user=req.session.user;
+    // console.log( JSON.stringify(posts)+'          seconde');
+    console.log(JSON.stringify(posts)+"---");
+    // res.render('posts',{
+    //   posts:posts
+    // });
+
+    //返回数据，为回调函数中  data里面有 posts和user
+    res.send({posts:posts,user:user});
+  }).catch(next);
+});
+
 // GET /posts/create 发表文章页
 router.get('/create', checkLogin, function(req, res, next) {
   res.render('create');
@@ -77,6 +97,7 @@ router.get('/:postId', function(req, res, next) {
     var comments = result[1];
     if (!post) {
       throw new Error('该文章不存在');
+      // res.redirect('/404');
     }
 
     res.render('post', {
