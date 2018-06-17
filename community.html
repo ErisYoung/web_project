@@ -6,44 +6,73 @@
         <title>Community</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/CodingSearch.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/stickUp.min.js"></script>
         <script src="js/CodingSearch.js"></script>
     </head>
     <body>
-        <div class="head" id="community-head">
-            <div>
-                <a href="index.html" class="nav">主页</a>
-                <a href="community.html" class="nav">社区</a>
-                <a href="usr.html" class="nav">个人</a>
+        <div class="head row text-center" id="community-head">
+            <div class="col-md-8">
+                <div class="row"></div>
+                <a href="index.html" class="nav col-md-1">主页</a>
+                <a href="community.html" class="nav col-md-1">社区</a>
+                <a href="usr.html" class="nav col-md-1">个人</a>
                 <div class="head-search" style="height: 30px;display: inline-block; font-size: 0">
                     <input type="text" name="search-context" class="head-searchinput" placeholder="search for question"></input>
                     <button type="button" class="head-searchbtn"><i class="iconfont icon-xiazai5"></i></button>
                 </div>
             </div>
-            <div></div>
-            <div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
                 <button type="button" class="login">登录</button>
                 <button type="button" class="sign">注册</button>
             </div>
         </div>
-        <h1>问题</h1>
-        <div class="question"></div>    
-        <div class="question"></div>
-        <div class="question"></div>    
-        <div class="question"></div>
-        <div class="question"></div>
-        <div class="question"></div>
+        <div class="question-head">
+            <span>问题</span>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 question-box">
+                <div class="question">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="cnt">
+                        <div class="cnt-title">asd</div>
+                        <div class="cnt-summary">fgh</div>
+                        <div class="cnt-info">
+                            <span>usr-name:<span>aaa</span></span>
+                            <span>data:<span>1970-1-1</span></span>
+                            <span><i class="iconfont icon-eye"></i>&nbsp;<span>123</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="question"></div>
+                <div class="question"></div>
+                <div class="question"></div>
+                <div class="question"></div>
+                <div class="question"></div>
+                <div class="question"></div>
+                <div class="question"></div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
         <div>
             <div class="login-form">
-                <div class="login-header">  
+                <div class="login-header">
                     <span>用户登录</span>
                     <button type="button" class="login-close">x</button>
                 </div>
                 <div class="login-cnt">
-                    <form action="" method="get">
+                    <form action="" method="get" class="text-center">
                         <div class="login-input">
                             <span>用户名</span>
                             <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
