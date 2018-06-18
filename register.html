@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>register</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/CodingSearch.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/stickUp.min.js"></script>
+        <script src="js/CodingSearch.js"></script>
+    </head>
+    <body>
+        <div class="register">
+            <form class="" method="post" enctype="multipart/form-data">
+                <div class="register-input">
+                    <span>用户名</span>
+                    <input type="text" name="name">
+                </div>
+                <div class="register-input">
+                    <span>密码</span>
+                    <input  type="password" name="password">
+                </div>
+                <div class="register-input">
+                    <span>重复密码</span>
+                    <input  type="password" name="repassword">
+                </div>
+                <div class="register-sex">
+                    <label>性别</label>
+                    <select class="" name="gender">
+                        <option value="m">男</option>
+                        <option value="f">女</option>
+                        <option value="x">保密</option>
+                    </select>
+                </div>
+                <div class="register-pic">
+                    <span>头像</span>
+                    <input type="file" name="avatar">
+                </div>
+                <div class="register-input">
+                    <span>个人简介</span>
+                    <textarea name="bio" rows="5" v-model="user.bio"></textarea>
+                </div>
+                <input type="submit" class="login-form-btn" value="注&nbsp;&nbsp;&nbsp;册">
+                
+            </form>
+        </div>
+        
+    </body>
+</html>

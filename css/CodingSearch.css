@@ -11,7 +11,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    min-width: 850px;
+    min-width: 1200px !important;
 }
 
 .search {
@@ -56,9 +56,10 @@ html, body {
     width: 100%;
     height: 45px;
     background: #222222;
-    display: flex;    /*justify-content: space-between;*/
+    display: flex;
     align-items: center;
     z-index: 9999;
+    margin: 0;
 }
 
 .login, .sign {
@@ -73,6 +74,8 @@ html, body {
 }
 
 .nav {
+
+    /*width: 100px;*/
     height: 35px;
     margin-left: 20px;
     padding: 4px 10px 4px 10px;
@@ -126,7 +129,7 @@ html, body {
     width: 50px;
     height: 30px;
     margin: 1px 1px 0 0;
-    float: right; 
+    float: right;
 }
 
 .login-cnt {
@@ -152,16 +155,81 @@ html, body {
     border-bottom: 1.5px solid #eeeeee;
 }
 
+.register {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    height: 650px;
+    margin: auto;
+    border-radius: 5px;
+    border: solid 1px #333333;
+    text-align: center;
+}
+
+.register-input {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.register-input span {
+    display: block;
+    text-align: left;
+    position: relative;
+    left: 32%;    /*padding-left: 355px;*/
+}
+
+.register-input input {
+    width: 280px;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid #eeeeee;
+}
+
+.register-input textarea {
+    width: 280px;
+    height: 160px;
+}
+
+.register-sex {
+    margin-top: 30px;
+    text-align: left;
+    position: relative;
+    left: 32%;    /*padding-left: 355px;*/
+}
+
+.register-pic {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-pic input {
+    width: 280px;
+    position: relative;
+    left: 32%;    /*padding-left: 355px;*/
+}
+
+.register-pic span {
+    display: block;
+    text-align: left;
+    position: relative;
+    left: 32%;   /*padding-left: 355px;*/
+}
+
 .login-form-btn {
     height: 30px;
     width: 200px;
     background: #4FBF8D;
+    border: none;
     border-radius: 5px;
     color: white;
     font-weight: bold;
 }
 
 .btn-group {
+
     /*text-align: center;*/
     margin-top: 30px;
 }
@@ -179,6 +247,9 @@ html, body {
 .head-search {
     position: relative;
     bottom: 2px;
+    margin-top: 4px;
+    display: inline-block;
+    float: left;
 }
 
 .head-search input, button {
@@ -187,8 +258,7 @@ html, body {
 }
 
 .head-searchinput {
-    display: inline-block;
-    width: 500px;
+    width: 520px;
     height: 28px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -201,12 +271,16 @@ html, body {
 
 .head-searchbtn {
     position: relative;
-    top: 6px;
+    top: 1px;
     height: 28px;
     cursor: pointer;
     border-radius: 0 3px 3px 0;
     background: #555555;
     transition: all 0.5s ease;
+}
+
+.question-area {
+    margin: 0;
 }
 
 .question-head {
@@ -243,8 +317,7 @@ html, body {
 }
 
 .cnt {
-    width: 94%;
-    /*background: red;*/
+    width: 94%;    /*background: red;*/
     height: 100%;
     padding-left: 20px;
 }
@@ -268,4 +341,36 @@ html, body {
 
 .cnt-info > span {
     margin-right: 30px;
+}
+
+.cnt-info > a {
+    margin-right: 30px;
+    color: black;
+}
+
+.cnt-info > a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.ans-btn {
+    width: 68px;
+    margin-right: 6px;
+    float: right;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
