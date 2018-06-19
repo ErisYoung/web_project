@@ -1,4 +1,4 @@
- <%- include('components/notification') %>
+<%- include('components/notification') %>
 <a href="/">主页</a>
 <a href="/posts">社区</a>
 <% if (user) {%>
@@ -7,8 +7,6 @@
 <a href="/signin">登录</a>
 <a href="/signup">注册</a>
 <% } %>
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,49 +24,61 @@
         <script src="js/CodingSearch.js"></script>
     </head>
     <body>
-
         <div class="head row text-center" id="community-head">
             <div class="col-xs-9">
                 <div class="row">
                     <a href="index.html" class="nav col-xs-1">主页</a>
                     <a href="community.html" class="nav col-xs-1">社区</a>
-                    <a href="usr.html" class="nav col-xs-1">个人</a>
                 </div>
             </div>
             <div class="col-xs-2"></div>
             <div class="col-xs-1">
                 <button type="button" class="login">登录</button>
-                <!--                 <button type="button" class="sign">注册</button>
-            -->            </div>
+            </div>
         </div>
         <div class="search">
             <input type="text" name="search-context" class="" placeholder="Input your question"></input>
             <button type="button" class=""><i class="iconfont icon-xiazai5"></i></button>
         </div>
-        <div class="login-form">
-            <div class="login-header">
-                <span>用户登录</span>
-                <button type="button" class="login-close">x</button>
-            </div>
-            <div class="login-cnt">
-                <form action="" method="get" class="text-center">
-                    <div class="login-input">
-                        <span>用户名</span>
-                        <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
+        <div class="row question-area home-question-area">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 question-box">
+                <div class="question home-question">
+                    <div class="photo">
                     </div>
-                    <div class="login-input">
-                        <span>密码</span>
-                        <input type="password" class="upwd" id="upwd" name="upwd" autocomplete="off" spellcheck="false" placeholder="">
+                    <div class="cnt">
+                        <div class="cnt-title"><a href="#" title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">题目</a></div>
+                        <div class="cnt-summary">摘要</div>
                     </div>
-                    <div class="btn-group">
-                        <button type="submit" class="login-form-btn">登&nbsp; &nbsp; 录</button>
-                        <div>
-                            <a href="register.html" class="" role="button">注册</a>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-        <div class="login-form-mask"></div>
-    </body>
+        <div class="col-md-2 col-xs-2"></div>
+    </div>
+    <div class="login-form">
+        <div class="login-header">
+            <span>用户登录</span>
+            <button type="button" class="login-close">x</button>
+        </div>
+        <div class="login-cnt">
+            <form action="" method="get" class="text-center">
+                <div class="login-input">
+                    <span>用户名</span>
+                    <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
+                </div>
+                <div class="login-input">
+                    <span>密码</span>
+                    <input type="password" class="upwd" id="upwd" name="upwd" autocomplete="off" spellcheck="false" placeholder="">
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="login-form-btn">登&nbsp; &nbsp; 录</button>
+                    <div>
+                        <a href="register.html" class="" role="button">注册</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="login-form-mask"></div>
+</body>
 </html>

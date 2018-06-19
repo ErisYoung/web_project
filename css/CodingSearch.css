@@ -161,12 +161,13 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 800px;
-    height: 650px;
+    width: 500px;
+    height: 660px;
     margin: auto;
     border-radius: 5px;
     border: solid 1px #333333;
     text-align: center;
+    box-shadow: 0 0 10px #666;
 }
 
 .register-input {
@@ -178,18 +179,18 @@ html, body {
     display: block;
     text-align: left;
     position: relative;
-    left: 32%;    /*padding-left: 355px;*/
+    left: 18%;
 }
 
 .register-input input {
-    width: 280px;
+    width: 320px;
     outline: none;
     border: none;
     border-bottom: 1.5px solid #eeeeee;
 }
 
 .register-input textarea {
-    width: 280px;
+    width: 320px;
     height: 160px;
 }
 
@@ -197,25 +198,38 @@ html, body {
     margin-top: 30px;
     text-align: left;
     position: relative;
-    left: 32%;    /*padding-left: 355px;*/
+    left: 18%;
+}
+
+.register-sex select {
+    height: 30px;
+    width: 320px;
+    border: none;
+    border-bottom: 1.5px solid #eeeeee;
+}
+
+.register-sex span {
+    display: block;
+    text-align: left;    
+    margin-bottom: 4px; 
 }
 
 .register-pic {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .register-pic input {
     width: 280px;
     position: relative;
-    left: 32%;    /*padding-left: 355px;*/
+    left: 18%;
 }
 
 .register-pic span {
     display: block;
     text-align: left;
     position: relative;
-    left: 32%;   /*padding-left: 355px;*/
+    left: 18%;
 }
 
 .login-form-btn {
@@ -226,6 +240,10 @@ html, body {
     border-radius: 5px;
     color: white;
     font-weight: bold;
+}
+
+.register-btn {
+    margin-top: 10px;
 }
 
 .btn-group {
@@ -294,10 +312,19 @@ html, body {
 
 .question {
     height: 106px;
-    border: 1px solid black;
+    border: 1px solid #666666;
+    border-radius: 5px;
     margin-top: 21px;
     display: flex;
 }
+.home-question {
+    height: 80px;
+}
+.home-question-area {
+    position: relative;
+    top: 100;
+}
+
 
 .photo {
     width: 6%;
@@ -355,7 +382,6 @@ html, body {
 
 .ans-btn {
     width: 68px;
-    margin-right: 6px;
     float: right;
 }
 
@@ -373,4 +399,9 @@ a:visited {
 
 a:hover {
     text-decoration: none;
+}
+
+.head-pic {
+    margin:0;
+    padding: 0;
 }

@@ -7,53 +7,77 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/CodingSearch.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" type="text/css" href="css/iconfont.css">
-        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/stickUp.min.js"></script>
-        <script src="js/CodingSearch.js"></script>
-    </head>
-    <body>
-       <div class="post-content">
-    <div class="ui grid">
-      <div class="four wide column">
-        <a class="avatar"
-           href="/posts?author=<%= post.author._id %>"
-           data-title="<%= post.author.name %> | <%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %>"
-           data-content="<%= post.author.bio %>">
-          <img class="avatar" src="/img/<%= post.author.avatar %>">
-        </a>
-      </div>
-      <div class="eight wide column">
-        <div class="ui segment">
-          <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
-          <pre><%- post.content %></pre>
-          <div>
-            <span class="tag"><%= post.created_at %></span>
-            <span class="tag right">
-              <span>浏览(<%= post.pv %>)</span>
-              <span>留言(<%= post.commentsCount %>)</span>
-  
-              <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
-            
-                <div class="ui inline dropdown">
-                  <div class="text"></div>
-                  <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item"><a href="/posts/<%= post._id %>/edit">编辑</a></div>
-                    <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
-                  </div>
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css
+            ">
+            <link href="css/CodingSearch.css" rel="stylesheet">
+            <!-- <link rel="stylesheet" href="/css/style.css"> -->
+            <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js
+            "></script>
+            <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js
+            "></script>
+            <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="js/stickUp.min.js"></script>
+            <script src="js/CodingSearch.js"></script>
+        </head>
+        <body>
+            <!-- <div class="post-content">
+                <div class="ui grid">
+                    <div class="two wide column">
+                        <a class="avatar"
+                            href="/posts?author=<%= post.author._id %>"
+                            data-title="<%= post.author.name %> | <%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %>"
+                            data-content="<%= post.author.bio %>">
+                            <img class="avatar" src="/img/<%= post.author.avatar %>">
+                        </a>
+                    </div>
+                    <div class=" wide column">
+                        <div class="ui segment">
+                            <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
+                        <pre><%- post.content %></pre>
+                        <div>
+                            <span class="tag"></span>
+                            <span class="tag right">
+                                <span>浏览</span>
+                                <span>留言</span>
+                                
+                                <div class="ui inline dropdown">
+                                    <div class="text"></div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item"><a href="/posts/<%= post._id %>/edit">编辑</a></div>
+                                        <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
+                                    </div>
+                                </div>
+                                
+                            </span>
+                        </div>
+                    </div>
                 </div>
-              <% } %>
-  
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-                    </body>
-                </html>
+            </div>
+        </div> -->
+        <div class="row question-area">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 question-box">
+                <div class="question">
+                    <div class="photo">
+                        
+                    </div>
+                    <div class="cnt">
+                        <div class="cnt-title"><a href="#" title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">题目</a></div>
+                        <div class="cnt-summary">摘要</div>
+                        <div class="cnt-info">
+                            <span>data:<span>1970-1-1</span></span>
+                            <span><i class="iconfont icon-eye"></i>&nbsp;<span>123</span></span>
+                            <a class="ans-btn">留言<i class="dropdown icon"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>    </body>
+    </html>
