@@ -50,7 +50,7 @@ router.post('/search', function (req, res, next) {
         hostname: 'stackoverflow.com',
         // path: '/search?q='+searchword,
         // path: '/questions/tagged/'+searchword,
-        path: '/questions/tagged/' + searchword + '?sort=frequent&pageSize=15',
+        path: '/questions/tagged/' + searchword + '?sort=frequent&pageSize=30',
         // https://stackoverflow.com/questions/tagged/mongodb?sort=newest&pagesize=30
         // https://stackoverflow.com/search?tab=Relevance&pagesize=30&q=http.get
         // https://stackoverflow.com/questions/tagged/mongodb?sort=frequent&pageSize=30
