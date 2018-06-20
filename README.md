@@ -32,26 +32,19 @@
 
 
 ## **数据结构**
-'''
-    user:
-     name: { type: 'string' },
-    password: { type: 'string' },
-    avatar: { type: 'string' },
-    gender: { type: 'string', enum: ['m', 'f', 'x'] },
-    bio: { type: 'string' }
-  });
 
-  post:
-   author: { type: Mongolass.Types.ObjectId },
-    title: { type: 'string' },
-    content: { type: 'string' },
-    pv: { type: 'number' }
+user:
+id|name|password|avatar|gender|bio
+---|:--:|:--:|:--:|:--:|---:
 
- comments:
-     author: { type: Mongolass.Types.ObjectId },
-    content: { type: 'string' },
-    postId: { type: Mongolass.Types.ObjectId }
-'''
+post:
+id|author|title|content|pv
+---|:--:|:--:|:--:|:---
+
+comments:
+id|author|content|postId
+---|:--:|:--:|:---
+
 
 ## **功能模块**
 1. 主页查询问题
