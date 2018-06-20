@@ -16,29 +16,26 @@ var BufferHelper = require('bufferhelper');
 router.get('/', function (req, res, next) {
     // console.log("hah");
     // console.log(req.fields.search+'==============');
-    console.log("dadad");
-    res.render('home', {
-        data: null
-    });
+    res.render('home');
 });
-router.post('/', function (req, res, next) {
-    // console.log(JSON.stringify(req.body)+'---------');  
-    // console.log(req.query.id+'---------id');
-    // console.log("yesdasd"+JSON.stringify(req.body)+'-------------------------');
-    var bia = [{
-        hha: 1,
-        title: 2
-    }, {
-        hha: 3,
-        title: 4
-    }];
-    console.log("second");
-    console.log(req.fields);
-    var tes = "<h1>" + bia.hha + "</h1><h2>" + bia.hha + "</h2>";
-    res.send(bia);
-    // res.render('home',{data:bia});
-    // res.render('home');
-});
+// router.post('/', function (req, res, next) {
+//     // console.log(JSON.stringify(req.body)+'---------');  
+//     // console.log(req.query.id+'---------id');
+//     // console.log("yesdasd"+JSON.stringify(req.body)+'-------------------------');
+//     var bia = [{
+//         hha: 1,
+//         title: 2
+//     }, {
+//         hha: 3,
+//         title: 4
+//     }];
+//     console.log("second");
+//     console.log(req.fields);
+//     var tes = "<h1>" + bia.hha + "</h1><h2>" + bia.hha + "</h2>";
+//     res.send(bia);
+//     // res.render('home',{data:bia});
+//     // res.render('home');
+// });
 router.post('/search', function (req, res, next) {
     var searchword = req.fields.searchword;
 
@@ -79,7 +76,7 @@ router.post('/search', function (req, res, next) {
                 };
                 questions.push(question);
             });
-            console.log(questions);
+            // console.log(questions);
             res.send(questions);
             // for (var i = 0; i < num; i++) {
             //     // console.log(questions[i].link);

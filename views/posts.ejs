@@ -17,9 +17,15 @@
   <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
   <link href="css/CodingSearch.css" rel="stylesheet">
+  <style>
+      .sign a:hover {
+          text-decoration: none !important;
+      }
+
+  </style>
 </head>
 
-<body>
+<body style="overflow: auto">
   <div class="head">
     <div>
       <a href="/" class="nav">主页</a>
@@ -32,7 +38,7 @@
     </div>
 
     <% if (user) {%>
-      <div class="nav-setting">
+      <div class="nav-setting" style="position: relative;right: 15px;">
         <div class="ui buttons">
           <div class="ui floating dropdown button">
             <i class="icon bars"></i>
@@ -51,9 +57,9 @@
       <% } else { %>
         <div>
           <button type="button" class="login">登录</button>
-          <a href="/signup">
-            <button type="button" class="sign">注册</button>
-          </a>
+          
+            <button type="button" class="sign"><a href="/signup" style="color: #dddddd">注册</a></button>
+          
         </div>
         <% } %>
   </div>

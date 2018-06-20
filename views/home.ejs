@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body style="overflow: auto">
@@ -46,9 +51,9 @@
             <% } else { %>
                 <div>
                     <button type="button" class="login" id="signin">登录</button>
-                    <a href="/signup">
-                        <button type="button" class="sign">注册</button>
-                    </a>
+                   
+                        <button type="button" class="sign"> <a href="/signup" style="color: #dddddd">注册 </a></button>
+                   
                 </div>
                 <% } %>
     </div>
