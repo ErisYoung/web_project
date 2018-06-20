@@ -7,6 +7,7 @@
     <title>Home</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="css/CodingSearch.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
@@ -18,7 +19,7 @@
     <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
 </head>
 
-<body>
+<body style="overflow: auto">
     <div class="head">
         <div>
             <a href="/" class="nav">主页</a>
@@ -26,7 +27,7 @@
         </div>
 
         <% if (user) {%>
-            <div class="nav-setting">
+            <div class="nav-setting" style="right: 15px;">
                 <div class="ui buttons">
                     <div class="ui floating dropdown button">
                         <i class="icon bars"></i>
@@ -36,7 +37,7 @@
                             </a>
                             <a class="item" href="/posts?author=<%= user._id %>">个人主页</a>
                             <a class="item" href="/setting">个人设置</a>
-                            <a class="item" href="/posts/create">发表文章</a>
+                            <a class="item" href="/posts/create">发表问题</a>
                             <a class="item" href="/signout">登出</a>
                         </div>
                     </div>
@@ -44,7 +45,7 @@
             </div>
             <% } else { %>
                 <div>
-                    <button type="button" class="login">登录</button>
+                    <button type="button" class="login" id="signin">登录</button>
                     <a href="/signup">
                         <button type="button" class="sign">注册</button>
                     </a>
@@ -57,13 +58,18 @@
         <button type="button" class="" id="search-button">
             <i class="iconfont icon-xiazai5"></i>
         </button>
-        <div class="content" id="content">
-
-
-
-        </div>
-
     </div>
+<!-- 
+    <div class="content" id="content">
+    </div> -->
+    <div class="cnt" id="content">
+            <!-- <div class="cnt-title">
+                <a href="#" title="">题目 </a>
+            </div>
+            <div class="cnt-summary">摘要aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div> -->
+
+    </div>    
+    <%- include('components/notification')  %>
     <div class="login-form">
         <div class="login-header">
             <span>用户登录</span>
@@ -73,14 +79,14 @@
             <form action="/signin" method="post">
                 <div class="login-input">
                     <span>用户名</span>
-                    <input type="text" class="uname" id="name" name="name" autocomplete="off" spellcheck="false" placeholder="">
+                    <input type="text" class="uname" id="name" name="username" autocomplete="off" spellcheck="false" placeholder="">
                 </div>
                 <div class="login-input">
                     <span>密码</span>
                     <input type="password" class="upwd" id="password" name="password" autocomplete="off" spellcheck="false" placeholder="">
                 </div>
                 <div class="btn-group">
-                    <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
+                    <button type="submit" class="login-form-btn" id="submit">登&nbsp;&nbsp;录</button>
                     <div>
                         <a href="/signup" class="" role="button">注册</a>
                     </div>

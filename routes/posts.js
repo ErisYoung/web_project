@@ -96,8 +96,8 @@ router.get('/:postId', function(req, res, next) {
     var post = result[0];
     var comments = result[1];
     if (!post) {
-      throw new Error('该文章不存在');
-      // res.redirect('/404');
+      res.redirect('/404');
+      // throw new Error('该文章不存在');
     }
 
     res.render('post', {

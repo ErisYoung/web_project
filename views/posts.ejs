@@ -1,38 +1,102 @@
-<%- include('header') %>
-    <a href="/">
-      主页</a>
-    <a href="/posts">社区</a>
-    
-    <!-- <form action="/posts/search" method="POST"> -->
-      <input type="text" name="searchword" placeholder="Search" id="searchword">
-      <input type="submit" value="搜索" id="submit">
-    <!-- </form> -->
+<!DOCTYPE html>
+<html>
 
-    <h1>Com</h1>
-    <br>
-    <br>
-    <br>
-    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="javascripts/CodingSearch.js"></script>
+  <link rel="stylesheet" href="css/searchContent.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+  <link href="css/CodingSearch.css" rel="stylesheet">
+</head>
 
-    <div id="posts">
- <% posts.forEach(function (post) { %>
-        <!-- 传入post变量 -->
-        <%- include('components/post-content', { post: post }) %>
-          <% }) %>
+<body>
+  <div class="head">
+    <div>
+      <a href="/" class="nav">主页</a>
+      <a href="/posts" class="nav">社区</a>
+      <div class="head-search" style="display: inline-block;position: relative;left: 20%;">
+        <input type="text" name="searchword" class="head-searchinput" id="searchword" placeholder="edit your question"></input><button type="button" class="head-searchbtn" id="submit">
+          <i class="iconfont icon-xiazai5"></i>
+        </button>
+      </div>
     </div>
-    
-    <div id="show"></div>
-<script src="javascripts/ejs.min.js"></script>
-<script src="javascripts/search.js"></script>
-<script type="text/javascript">
-  // 点击按钮弹出下拉框
-  $('.ui.dropdown').dropdown();
-  // 鼠标悬浮在头像上，弹出气泡提示框
-  $('.post-content .avatar').popup({
-    inline: true,
-    position: 'bottom right',
-    lastResort: 'bottom right',
-  });
-</script>
+
+    <% if (user) {%>
+      <div class="nav-setting">
+        <div class="ui buttons">
+          <div class="ui floating dropdown button">
+            <i class="icon bars"></i>
+            <div class="menu">
+              <a class="item">欢迎
+                <%= user.name %>
+              </a>
+              <a class="item" href="/posts?author=<%= user._id %>">个人主页</a>
+              <a class="item" href="/setting">个人设置</a>
+              <a class="item" href="/posts/create">发表问题</a>
+              <a class="item" href="/signout">登出</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+        <div>
+          <button type="button" class="login">登录</button>
+          <a href="/signup">
+            <button type="button" class="sign">注册</button>
+          </a>
+        </div>
+        <% } %>
+  </div>
+  <%- include('components/notification')  %>
+  <br>
+  <br>
+  <br>
+  <div id="posts">
+    <% posts.forEach(function (post) { %>
+      <!-- 传入post变量 -->
+      <%- include('components/post-content', { post: post }) %>
+        <% }) %>
+  </div>
+  <div id="show"></div>
+
+  <div class="login-form">
+    <div class="login-header">
+      <span>用户登录</span>
+      <button type="button" class="login-close">x</button>
+    </div>
+    <div class="login-cnt">
+        
+      <form action="/signin" method="post">
+        <div class="login-input">
+          <span>用户名</span>
+          <input type="text" class="uname" id="name" name="username" autocomplete="off" spellcheck="false" placeholder="">
+        </div>
+        <div class="login-input">
+          <span>密码</span>
+          <input type="password" class="upwd" id="password" name="password" autocomplete="off" spellcheck="false" placeholder="">
+        </div>
+        <div class="btn-group">
+          <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
+          <div>
+            <a href="/signup" class="" role="button">注册</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script charset="UTF-8" type="text/javascript" src="javascripts/ejs.min.js"></script>
+  <script src="javascripts/search.js"></script>
 </body>
+
 </html>

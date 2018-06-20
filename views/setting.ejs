@@ -6,6 +6,7 @@
     <title>hello</title>
     <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/CodingSearch.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
 </head>
@@ -13,21 +14,21 @@
 <body>
 
     <%- include('components/nav-setting') %>
-        <%- include('header') %>
 
-            <div class="ui grid">
-                <div class="four wide column"></div>
-                <div class="eight wide column">
-                    <div class="ui form segment">
-                        <div class="field required">
-                            <label>头像</label>
-                            <img class="avatar" src="/img/<%= user.avatar %>">
-                        </div>
-                        <div class="field required">
+
+        <div class="ui grid" style="position: relative;top: 150px;">
+            <div class="four wide column"></div>
+            <div class="eight wide column">
+                <div class="ui form segment">
+                    <div class="field" style="margin:0;">
+                        <img style="float: left;" class="avatar" src="/img/<%= user.avatar %>">
+                    </div>
+                    <div style="display: inline-block;height: 222px;padding-left:20px; ">
+                        <div class="field">
                             <label>用户名</label>
                             <%= user.name %>
                         </div>
-                        <div class="field required">
+                        <div class="field">
                             <label>性别</label>
                             <% if(user.gender=='m') {%>
                                 <%= '程序猿' %>
@@ -37,13 +38,19 @@
                                                 <%= '程序⚪'%>
                                                     <% } %>
                         </div>
-                        <div class="field required">
+                        <div class="field ">
                             <label>个人简介</label>
-                            <div> <%= user.bio  %></div>
+                            <div>
+                                <%= user.bio  %>
+                            </div>
                         </div>
-                        <a href="/setting/edit">编辑</a>
-                    </div>
+                 
+                    <button class="sign">
+                        <a href="/setting/edit" style="color: white">编辑</a>
+                    </button>
+                </div>
                 </div>
             </div>
+        </div>
 
-            <%- include('footer') %>
+        <%- include('footer') %>
