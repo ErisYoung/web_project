@@ -41,8 +41,8 @@ body {
   
   .nav-setting {
     position: fixed;
-    right: 30px;
-    top: 35px;
+    right: 0px;
+    top: 45px;
     z-index: 999;
   }
   

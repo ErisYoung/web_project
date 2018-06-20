@@ -344,7 +344,7 @@ html, body {
 }
 
 .cnt {
-    width: 94%;    /*background: red;*/
+    width: 94%;    background: red;
     height: 100%;
     padding-left: 20px;
 }

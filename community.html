@@ -1,97 +1,223 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Community</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/CodingSearch.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
-        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/stickUp.min.js"></script>
-        <script src="js/CodingSearch.js"></script>
-    </head>
-    <body>
-        <div class="head row text-center" id="community-head">
-            <div class="col-xs-9">
-                <div class="row">
-                    <a href="index.html" class="nav col-xs-1">主页</a>
-                    <a href="community.html" class="nav col-xs-1">社区</a>
-                    <div class="head-search">
-                        <input type="text" name="search-context" class="head-searchinput" placeholder="edit your question"></input><button type="button" class="head-searchbtn"><i class="iconfont icon-xiazai5"></i></button>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Community</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/CodingSearch.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/stickUp.min.js"></script>
+    <script src="js/CodingSearch.js"></script>
+</head>
+
+<body>
+    <div class="head row text-center" id="community-head">
+        <div class="col-xs-9">
+            <div class="row">
+                <a href="index.html" class="nav col-xs-1">主页</a>
+                <a href="community.html" class="nav col-xs-1">社区</a>
+                <div class="head-search">
+                    <input type="text" name="search-context" class="head-searchinput" placeholder="edit your question"></input>
+                    <button type="button" class="head-searchbtn">
+                        <i class="iconfont icon-xiazai5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-1">
+            <button type="button" class="login">登录</button>
+        </div>
+    </div>
+    <div class="row question-area">
+        <div class="question-head">
+            <span>问题</span>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8 question-box">
+            <div class="question">
+                <div class="cnt">
+                    <div class="cnt-title">
+                        <a href="#" title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">题目</a>
+                    </div>
+                    <div class="cnt-summary">摘要</div>
+                    <div class="cnt-info">
+                        <a hred="#" title="">usr-name:
+                            <span>aaa</span>
+                        </a>
+                        <span>data:
+                            <span>1970-1-1</span>
+                        </span>
+                        <span>
+                            <i class="iconfont icon-eye"></i>&nbsp;
+                            <span>123</span>
+                        </span>
+                        <!--           <button type="button" class="ans-btn">留言</button> -->
                     </div>
                 </div>
             </div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-1">
-                <button type="button" class="login">登录</button>
-            </div>
+            <div class="question"></div>
+            <div class="question"></div>
+            <div class="question"></div>
+            <div class="question"></div>
+            <div class="question"></div>
+            <div class="question"></div>
+            <div class="question"></div>
         </div>
-        <div class="row question-area">
-            <div class="question-head">
-                <span>问题</span>
+
+
+
+        <div class="col-md-2 col-xs-2"></div>
+    </div>
+    <div>
+        <div class="login-form">
+            <div class="login-header">
+                <span>用户登录</span>
+                <button type="button" class="login-close">x</button>
             </div>
-            <div class="col-md-2 col-xs-2"></div>
-            <div class="col-md-8 col-xs-8 question-box">
-                <div class="question">
-                    <div class="photo">
-                        
+            <div class="login-cnt">
+                <form action="" method="get" class="text-center">
+                    <div class="login-input">
+                        <span>用户名</span>
+                        <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
                     </div>
-                    <div class="cnt">
-                        <div class="cnt-title"><a href="#" title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">题目</a></div>
-                        <div class="cnt-summary">摘要</div>
-                        <div class="cnt-info">
-                            <a hred="#" title="">usr-name:<span>aaa</span></a>
-                            <span>data:<span>1970-1-1</span></span>
-                            <span><i class="iconfont icon-eye"></i>&nbsp;<span>123</span></span>
-                  <!--           <button type="button" class="ans-btn">留言</button> -->
+                    <div class="login-input">
+                        <span>密码</span>
+                        <input type="password" class="upwd" id="upwd" name="upwd" autocomplete="off" spellcheck="false" placeholder="">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
+                        <div>
+                            <a href="register.html" class="" role="button">注册</a>
                         </div>
                     </div>
-                </div>
-                <div class="question"></div>
-                <div class="question"></div>
-                <div class="question"></div>
-                <div class="question"></div>
-                <div class="question"></div>
-                <div class="question"></div>
-                <div class="question"></div>
+                </form>
             </div>
-
-
-
-            <div class="col-md-2 col-xs-2"></div>
         </div>
-        <div>
-            <div class="login-form">
-                <div class="login-header">
-                    <span>用户登录</span>
-                    <button type="button" class="login-close">x</button>
-                </div>
-                <div class="login-cnt">
-                    <form action="" method="get" class="text-center">
-                        <div class="login-input">
-                            <span>用户名</span>
-                            <input type="text" class="uname" id="uname" name="uname" autocomplete="off" spellcheck="false" placeholder="">
-                        </div>
-                        <div class="login-input">
-                            <span>密码</span>
-                            <input type="password" class="upwd" id="upwd" name="upwd" autocomplete="off" spellcheck="false" placeholder="">
-                        </div>
-                        <div class="btn-group">
-                            <button type="submit" class="login-form-btn">登&nbsp;&nbsp;录</button>
-                            <div>
-                                <a href="register.html" class="" role="button">注册</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="login-form-mask"></div>
-        </div>
-    </body>
+        <div class="login-form-mask"></div>
+    </div>
+</body>
+
 </html>
+
+
+<%- include('header') %>
+
+    <div class="head">
+        <div>
+            <a href="/" class="nav">主页</a>
+            <a href="/posts" class="nav">社区</a>
+            <div class="head-search">
+                <input type="text" name="searchword" class="head-searchinput" id="searchword" placeholder="edit your question"></input>
+                <button type="button" id="submit" class="head-searchbtn">
+                    <i class="iconfont icon-xiazai5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <% if (user) {%>
+        <div class="nav-setting">
+            <div class="ui buttons">
+                <div class="ui floating dropdown button">
+                    <i class="icon bars"></i>
+                    <div class="menu">
+                        <a class="item">欢迎
+                            <%= user.name %>
+                        </a>
+                        <a class="item" href="/posts?author=<%= user._id %>">个人主页</a>
+                        <a class="item" href="/setting">个人设置</a>
+                        <a class="item" href="/posts/create">发表文章</a>
+                        <a class="item" href="/signout">登出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } else { %>
+            <div>
+                <button type="button" class="login">登录</button>
+                <a href="/signup">
+                    <button type="button" class="sign">注册</button>
+                </a>
+            </div>
+            <% } %>
+
+                <!-- <a href="/">
+      主页</a>
+    <a href="/posts">社区</a> -->
+
+                <!-- <form action="/posts/search" method="POST"> -->
+                <!-- <input type="text" name="searchword" placeholder="Search" id="searchword">
+      <input type="submit" value="搜索" id="submit"> -->
+                <!-- </form> -->
+
+                <!-- <h1>Com</h1>
+    
+    
+    <br> -->
+                <br>
+                <br>
+                <div id="posts">
+                    <% posts.forEach(function (post) { %>
+                        <!-- 传入post变量 -->
+                        <%- include('components/post-content', { post: post }) %>
+                            <% }) %>
+                </div>
+
+                <div id="show"></div>
+                <script src="javascripts/ejs.min.js"></script>
+                <script src="javascripts/search.js"></script>
+                <script type="text/javascript">
+                    // 点击按钮弹出下拉框
+                    $('.ui.dropdown').dropdown();
+                    // 鼠标悬浮在头像上，弹出气泡提示框
+                    $('.post-content .avatar').popup({
+                        inline: true,
+                        position: 'bottom right',
+                        lastResort: 'bottom right',
+                    });
+                </script>
+                </body>
+
+                </html>
+
+                <div class="ui grid">
+                    <div class="four wide column"></div>
+                    <div class="eight wide column">
+                        <div class="ui form segment">
+                            <div class="field required">
+                                <label>头像</label>
+                                <img class="avatar" src="/img/<%= user.avatar %>">
+                            </div>
+                            <div class="field required">
+                                <label>用户名</label>
+                                <%= user.name %>
+                            </div>
+                            <div class="field required">
+                                <label>性别</label>
+                                <% if(user.gender=='m') {%>
+                                    <%= '程序猿' %>
+                                        <% } else if(user.gender=='f') {%>
+                                            <%= '程序媛'%>
+                                                <% } else { %>
+                                                    <%= '程序⚪'%>
+                                                        <% } %>
+                            </div>
+                            <div class="field required">
+                                <label>个人简介</label>
+                                <div>
+                                    <%= user.bio  %>
+                                </div>
+                            </div>
+                            <a href="/setting/edit">编辑</a>
+                        </div>
+                    </div>
+                </div>

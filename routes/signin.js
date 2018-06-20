@@ -12,15 +12,17 @@ router.get('/', checkNotLogin, function(req, res, next) {
 
 // POST /signin 用户登录
 router.post('/', checkNotLogin, function(req, res, next) {
-  var name = req.fields.name;
+  var name = req.fields.username;
   var password = req.fields.password;
-
+  
   UserModel.getUserByName(name)
     .then(function (user) {
       console.log( JSON.stringify(user)+'----------------user');
       if (!user) {
         req.flash('error', '用户不存在');
         return res.redirect('back');
+        // res.send("error");
+        // return null;
       }
       // 检查密码是否匹配
       if (sha1(password) !== user.password) {
@@ -32,7 +34,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
       delete user.password;
       req.session.user = user;
       // 跳转到主页
-      res.redirect("/home");
+      res.redirect("back");
     })
     .catch(next);
 });

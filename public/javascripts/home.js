@@ -2,6 +2,10 @@ $(function () {
     $("#search-button").on("click", function () {
         var searchword = $("#searchbar").val();
 
+        $('.search').animate({
+            top: '20%'
+        }, "slow");
+
         $.ajax({
             type: "POST",
             url: "/home/search",
@@ -15,12 +19,34 @@ $(function () {
             }
         });
     });
+    // $("#submit").on("click", function () {
+    //     var username = $("#name").val();
+    //     var password = $("#password").val();
+    //     console.log("enter")
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "/signin",
+    //         data: {
+    //             username: username,
+    //             password: password
+    //         },
+    //         success: function (data) {
+    //             console.log(data + 'daaaaaaaaaaaaaaaaaaa');
+    //             if (data == '1')
+    //             {
+    //                 $("#signin").click();
+    //             }
+                    
+                
+    //         }
+    //     });
+    // });
 
 });
 
 function bindHTML(datas) {
     // var str =  $('#newshow').text();
-    var st = '<% datas.forEach(function(data){  %><div class="question"><a href=<%= data.link %>><%= data.title %></a><div class="excerpt"><%= data.excerpt %></div></div><% }) %>';
+    var st = '<% datas.forEach(function(data){  %><div class="cnt-title"><a href=<%= data.link %>><%= data.title %></a></div><div class="cnt-summary"><%= data.excerpt %></div><% }) %>';
     var result = ejs.render(st, {
         datas: datas
     });
